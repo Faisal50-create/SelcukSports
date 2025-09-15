@@ -1,0 +1,85 @@
+baseURL = "https://dazcfutboltv.me/"
+languageCode = "es-ES"
+title = "DazcFutbolTV - Partidos en Directo y Canales Deportivos"
+theme = "Mango"
+enableRobotsTXT = true
+
+[params]
+  description = "En dazcfutboltv puedes ver fútbol en vivo online gratis. Disfruta LaLiga, Champions, Copa Libertadores, Sudamericana, ESPN y FOX Sports en HD"
+  author = "DazcFutbolTV"
+  copyright = "© 2024 DazcFutbolTV. All Rights Reserved."
+  keywords = ["DazcFutbolTV", "dazcfutbolios", "DazcFutboltv App", "futbol en vivo", "Partidos de futbol"]
+
+  logo = "/images/logo.png"
+  favicon = "/favicon.ico"
+  og_image = "/images/social-preview.jpg"
+
+[params.social]
+  twitter = "https://twitter.com/YourHandle"
+  facebook = "https://facebook.com/YourPage"
+  instagram = "https://instagram.com/YourProfile"
+  youtube = "https://youtube.com/@YourChannel"
+
+# Menus
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "matches"
+  name = "Live Matches"
+  url = "/matches/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "/blog/"
+  weight = 3
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 4
+
+# Footer
+[[menu.footer]]
+  name = "Privacy Policy"
+  url = "/privacy/"
+
+[[menu.footer]]
+  name = "DMCA"
+  url = "/dmca/"
+
+[[menu.footer]]
+  name = "Contact"
+  url = "/contact/"
+
+[services.googleAnalytics]
+  ID = "G-XXXXXXXXXX"
+
+# Sitemap
+[sitemap]
+  changefreq = "daily"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+# Outputs
+[outputs]
+  home = ["HTML", "RSS", "SITEMAP"]   # homepage + sitemap
+  section = ["HTML", "SITEMAP"]       # posts sections bhi sitemap me
+  taxonomy = ["HTML"]                 # categories/tags sitemap se hata diye
+  term = ["HTML"]                     # terms bhi sitemap se hata diye
+  page = ["HTML", "SITEMAP"]          # individual posts/pages sitemap me
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Permalinks
+[permalinks]
+  blog = "/:slug/"   # posts = example.com/post-name/

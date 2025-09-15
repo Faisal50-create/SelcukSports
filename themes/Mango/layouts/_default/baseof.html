@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="ltr">
+<head>
+  {{ partial "head.html" . }}
+  {{ partial "schema.html" . }}
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+
+  {{ partial "header.html" . }}
+
+  <main id="main-content" class="container" role="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  <!-- ✅ Single JS Load -->
+  <script src="{{ "js/main.js" | relURL }}" defer></script>
+
+</body>
+</html>

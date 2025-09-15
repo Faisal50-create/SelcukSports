@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or drafts (agar hon)
+Disallow: /admin/
+Disallow: /drafts/
+Disallow: /demo/
+
+Sitemap: http://localhost:1313/sitemap.xml

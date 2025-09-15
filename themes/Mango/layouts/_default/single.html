@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="post">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  {{ if .Params.tags }}
+  <div class="post-tags">
+    <strong>Tags:</strong>
+    {{ range .Params.tags }}
+      <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
+{{ end }}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title id="pg-title">Reproductor - Evento</title>
+  <meta name="robots" content="noindex,follow" />
+  <meta name="referrer" content="no-referrer" />
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; background:#0e1117; color:#eaeef2; }
+    header { padding: 12px 16px; display:flex; align-items:center; gap:12px; background:#111623; border-bottom:1px solid #1b2131; }
+    header .title { font-weight:700; font-size:16px; line-height:1.2; }
+    header .meta { font-size:12px; opacity:.8 }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    .player { position:relative; padding: 0 16px 16px; }
+    iframe { width:100%; height: calc(100vh - 70px); border:0; border-radius:12px; background:#000; }
+    .badge { display:inline-flex; align-items:center; gap:6px; padding:4px 8px; border-radius:999px; font-size:12px; border:1px solid #2a334a; }
+    .badge.live { color:#ff6464; border-color:#ff6464; }
+    .back { color:#9fb3c8; text-decoration:none; border:1px solid #2a334a; padding:6px 10px; border-radius:10px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+     <a class="back" href="/" target="_top" aria-label="Volver">← Home</a>
+
+      <div style="display:flex;flex-direction:column;gap:4px;">
+        <div class="title" id="ev-title">Cargando…</div>
+        <div class="meta" id="ev-meta"></div>
+      </div>
+      <div style="margin-left:auto" id="ev-status" class="badge">Evento</div>
+    </header>
+    <div class="player">
+     <iframe id="frame" allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen referrerpolicy="no-referrer" muted></iframe>
+    </div>
+  </div>
+
+  <script>
+    // helpers
+    function qp(name){ return new URLSearchParams(location.search).get(name) || ""; }
+    function safeDecode(b64){
+      try { return atob(b64); } catch(e){ return ""; }
+    }
+    function toTitle(slug){
+      return decodeURIComponent(slug || "").replace(/-/g," ").replace(/\s+/g," ").trim();
+    }
+
+    const r = qp("r");        // base64 external URL
+    const t = qp("t");        // slug (optional)
+    const src = safeDecode(r);
+
+    const isHttp = /^https?:\/\//i.test(src);
+
+    // hydrate UI
+    const evTitle = document.getElementById("ev-title");
+    const evMeta  = document.getElementById("ev-meta");
+    const evStatus= document.getElementById("ev-status");
+    const frame   = document.getElementById("frame");
+    const pgTitle = document.getElementById("pg-title");
+
+    const prettyTitle = t ? toTitle(t) : "Evento en Vivo";
+    evTitle.textContent = prettyTitle;
+    pgTitle.textContent = prettyTitle + " - Reproductor";
+    evMeta.textContent = "Player interno";
+
+    if (/-en-vivo|live/.test(prettyTitle)) evStatus.classList.add("live");
+
+    if (isHttp) {
+      // force autoplay + muted params
+      let finalSrc = src;
+      if (!/[?&]autoplay=1/.test(finalSrc)) {
+        finalSrc += (finalSrc.includes("?") ? "&" : "?") + "autoplay=1&mute=1";
+      }
+
+      frame.src = finalSrc;
+
+      if (t) {
+        const pretty = `/stream/eventos/${encodeURIComponent(t)}`;
+        if (!location.pathname.endsWith(t)) {
+          history.replaceState(null, "", `${pretty}?r=${encodeURIComponent(r)}`);
+        }
+      }
+    } else {
+      evTitle.textContent = "Link inválido";
+      evMeta.textContent  = "No se pudo abrir el stream";
+      evStatus.textContent= "Error";
+      frame.replaceWith(Object.assign(document.createElement("div"), {
+        style:"padding:20px",
+        textContent:"Stream no disponible."
+      }));
+    }
+  </script>
+</body>
+</html>

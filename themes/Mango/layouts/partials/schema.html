@@ -1,0 +1,121 @@
+{{/* ================================
+   ✅ Hugo Schema Partial - SEO Optimized
+   Hub & Spoke Friendly + FAQ on Home
+   ================================ */}}
+
+{{ if .IsHome }}
+<!-- 📄 WebSite + WebPage Schema (Homepage with Spain Targeting) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "name": "{{ .Site.Title }}",
+      "url": "{{ .Site.BaseURL }}",
+      "inLanguage": "es-ES",
+      "contentLocation": {
+        "@type": "Place",
+        "name": "Spain"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ .Site.BaseURL }}search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}#webpage",
+      "url": "{{ .Permalink }}",
+      "name": "{{ .Site.Title }}",
+      "description": "{{ .Site.Params.description }}",
+      "inLanguage": "es-ES",
+      "isPartOf": {
+        "@id": "{{ .Site.BaseURL }}#website"
+      }
+    }
+  ]
+}
+</script>
+
+
+{{ end }}  
+
+{{ if .IsPage }}
+<!-- 📄 WebSite Schema (For posts) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}"
+}
+</script>
+
+<!-- 📄 BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ .Site.BaseURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+  ]
+}
+</script>
+
+<!-- 📄 BlogPosting Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title | safeJS }}",
+  "description": "{{ with .Description }}{{ . | plainify | safeJS }}{{ else }}{{ .Summary | plainify | safeJS }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  {{ with .Params.featured_image }}
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ . | absURL }}",
+    "width": 1200,
+    "height": 675
+  },
+  {{ end }}
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author | default "Admin" }}{{ end }}",
+    "url": "{{ .Site.BaseURL }}author/{{ .Params.author | urlize }}/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ absURL (default "/images/logo.png" .Site.Params.logo) }}",
+      "width": 300,
+      "height": 60
+    }
+  },
+  "articleSection": "{{ .Section }}",
+  "keywords": {{ with .Params.keywords }}[{{ range $i, $k := . }}{{ if $i }}, {{ end }}"{{ $k }}"{{ end }}]{{ else }}[]{{ end }},
+  "wordCount": "{{ .WordCount }}"
+}
+</script>
+{{ end }}

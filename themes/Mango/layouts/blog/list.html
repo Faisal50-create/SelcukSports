@@ -1,0 +1,43 @@
+{{ define "main" }}
+  <div class="blog-container" itemscope itemtype="https://schema.org/Blog">
+
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="filter-btn active" data-category="all">All</button>
+      {{ range .Site.Taxonomies.categories }}
+        <button class="filter-btn" data-category="{{ .Page.Title | urlize }}">{{ .Page.Title }}</button>
+      {{ end }}
+    </div>
+
+    <!-- Post Grid -->
+    <div class="post-grid">
+      {{ $paginator := .Paginate .Pages }}
+      {{ range $paginator.Pages }}
+        {{ partial "post-card" . }}
+      {{ end }}
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      {{ if gt $paginator.TotalPages 1 }}
+        {{ if $paginator.HasPrev }}
+          <a href="{{ $paginator.Prev.URL }}" class="page-link">« Prev</a>
+        {{ end }}
+
+        {{ range $paginator.Pagers }}
+          <a href="{{ .URL }}" class="page-link {{ if eq . $paginator }}active{{ end }}">
+            {{ .PageNumber }}
+          </a>
+        {{ end }}
+
+        {{ if $paginator.HasNext }}
+          <a href="{{ $paginator.Next.URL }}" class="page-link">Next »</a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="/css/category-filter.css">
+  <link rel="stylesheet" href="/css/pagination.css">
+  <script src="/js/category-filter.js"></script>
+{{ end }}

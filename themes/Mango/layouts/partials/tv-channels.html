@@ -1,0 +1,21 @@
+<div class="tv-channels-section" itemscope itemtype="https://schema.org/ItemList">
+  <h2 class="section-title" itemprop="name">TV Channels</h2>
+  
+  <div class="tv-channels-grid" id="tvChannelsGrid" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+    {{ $tvChannels := where .Site.RegularPages "Params.categories" "intersect" (slice "Channels") }}
+    {{ range $index, $item := $tvChannels }}
+      <div class="tv-channel-item{{ if ge $index 3 }} hidden-tv{{ end }}" 
+           itemprop="item" 
+           itemscope 
+           itemtype="https://schema.org/ListItem" 
+           data-position="{{ add $index 1 }}">
+        {{ partial "post-card" $item }}
+        <meta itemprop="position" content="{{ add $index 1 }}">
+      </div>
+    {{ end }}
+  </div>
+
+  {{ if gt (len $tvChannels) 3 }}
+    <button id="loadMoreTv" class="load-more-btn">Load More</button>
+  {{ end }}
+</div>

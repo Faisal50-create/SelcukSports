@@ -1,0 +1,28 @@
+<header class="site-header" role="banner" itemscope itemtype="https://schema.org/WPHeader" style="background: var(--header-bg); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="header-content">
+      <!-- Logo -->
+ <!-- Logo --> <a href="/" class="site-logo"> <img src="/images/logo1.webp" alt="DazcFutbolTV Logo" width="180" height="45" loading="eager" decoding="async"> </a>
+    
+      
+      <!-- Mobile Menu Button -->
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+      
+      <!-- Main Navigation -->
+      <nav class="main-navigation" aria-label="Main navigation">
+        <ul class="menu">
+          <li><a href="/" style="color: var(--header-text);">Home</a></li>
+          <li><a href="/blog" style="color: var(--header-text);">Blog</a></li>
+          <li><a href="/about" style="color: var(--header-text);">About</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Theme Toggle -->
+      {{ partial "theme-toggle.html" . }}
+    </div>
+  </div>
+</header>
