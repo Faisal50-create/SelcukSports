@@ -116,20 +116,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // FAQ Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            // Toggle active class on clicked question
-            question.classList.toggle('active');
-            
-            // Close other open questions (optional)
-            faqQuestions.forEach(otherQuestion => {
-                if (otherQuestion !== question && otherQuestion.classList.contains('active')) {
-                    otherQuestion.classList.remove('active');
-                }
-            });
-        });
+    document.querySelectorAll('.faq-answer').forEach(function(ans){
+        ans.style.display   = 'block';
+        ans.style.maxHeight = 'none';
+        ans.style.visibility= 'visible';
+        ans.style.opacity   = '1';
     });
 });
+
 

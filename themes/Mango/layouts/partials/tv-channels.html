@@ -4,7 +4,7 @@
   <div class="tv-channels-grid" id="tvChannelsGrid" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
     {{ $tvChannels := where .Site.RegularPages "Params.categories" "intersect" (slice "Channels") }}
     {{ range $index, $item := $tvChannels }}
-      <div class="tv-channel-item{{ if ge $index 3 }} hidden-tv{{ end }}" 
+      <div class="tv-channel-item{{ if ge $index 12 }} hidden-tv{{ end }}" 
            itemprop="item" 
            itemscope 
            itemtype="https://schema.org/ListItem" 
@@ -15,7 +15,7 @@
     {{ end }}
   </div>
 
-  {{ if gt (len $tvChannels) 3 }}
+  {{ if gt (len $tvChannels) 12 }}
     <button id="loadMoreTv" class="load-more-btn">Load More</button>
   {{ end }}
 </div>

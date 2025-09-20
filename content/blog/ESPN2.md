@@ -8,7 +8,7 @@ title: ESPN1
 meta_description: Disfruta de ESPN1 en vivo con fútbol, análisis y grandes
   torneos internacionales a través de dazcfutboltv, tu mejor opción online.
 summary: A brief description for SEO rich snippets
-featured_image: /images/posts/default.jpg
+featured_image: /uposts/espn2.webp
 keywords:
   - ESPN1
 author: Faisal Khan

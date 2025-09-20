@@ -638,6 +638,7 @@ footer {
     transition: max-height 0.3s ease, padding 0.3s ease, color 0.3s ease;
     color: var(--light-text);
     line-height: 1.6;
+    display: block !important;
 }
 
 .faq-question.active + .faq-answer {
