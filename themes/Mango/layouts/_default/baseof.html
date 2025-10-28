@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" dir="ltr">
+<html lang="tr" class="no-js">
 <head>
-  {{ partial "head.html" . }}
-  {{ partial "schema.html" . }}
+    
+    {{ partial "head.html" . }}
 </head>
-<body itemscope itemtype="https://schema.org/WebPage">
-
-  {{ partial "header.html" . }}
-
-  <main id="main-content" class="container" role="main">
-    {{ block "main" . }}{{ end }}
-  </main>
-
-  {{ partial "footer.html" . }}
-
-  <!-- ✅ Single JS Load -->
-  <script src="{{ "js/main.js" | relURL }}" defer></script>
-
+<body>
+    {{ partial "header.html" . }}
+    <main id="main" class="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    <script src="{{ "js/main.js" | relURL }}"></script>
 </body>
 </html>

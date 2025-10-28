@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-# Disallow admin or drafts (agar hon)
-Disallow: /admin/
-Disallow: /drafts/
-Disallow: /demo/
-
-Sitemap: {{ .Site.BaseURL }}sitemap.xml

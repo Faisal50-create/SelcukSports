@@ -1,0 +1,37 @@
+<!-- This partial is now simplified since pagination is handled in home.html -->
+<div class="matches-grid__inner">
+    {{ $author := site.Params.author }}
+    {{ range . }}
+    <article class="match-card {{ .Params.status }}" data-status="{{ .Params.status }}">
+        <div class="match-card__header">
+            <span class="league">{{ .Params.league }}</span>
+            <span class="status-badge {{ .Params.status }}">{{ .Params.status }}</span>
+        </div>
+        
+        <div class="match-card__teams">
+            <div class="team">
+                <h3>{{ .Params.team_home }}</h3>
+            </div>
+            
+            <div class="vs">VS</div>
+            
+            <div class="team">
+                <h3>{{ .Params.team_away }}</h3>
+            </div>
+        </div>
+        
+        <div class="match-card__meta">
+            <time datetime="{{ .Params.match_date }}T{{ .Params.match_time }}">
+                {{ dateFormat "Jan 2, 2006" .Params.match_date }} at {{ .Params.match_time }}
+            </time>
+            <span class="author">By {{ $author | default "Selçuksports" }}</span>
+        </div>
+        
+        <div class="match-card__actions">
+            <a href="{{ .RelPermalink }}" class="btn" aria-label="View {{ .Title }} details">
+                Burada İzle
+            </a>
+        </div>
+    </article>
+    {{ end }}
+</div>

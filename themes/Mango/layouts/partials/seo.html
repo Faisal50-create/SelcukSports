@@ -1,0 +1,55 @@
+{{ $title := .Title }}
+{{ $desc := .Description | default .Site.Params.description }}
+
+{{ if .IsHome }}
+    <title>{{ .Site.Title }} - {{ .Site.Params.description }}</title>
+    <meta name="description" content="{{ $desc }}">
+{{ else }}
+    <title>{{ $title }} | {{ .Site.Title }}</title>
+    <meta name="description" content="{{ $desc }}">
+{{ end }}
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+
+{{ with .Params.featured_image }}
+<meta property="og:image" content="{{ . | absURL }}">
+<meta property="og:image:alt" content="{{ $title }}">
+{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+
+{{ if .IsPage }}
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "{{ .Title }}",
+    "startDate": "{{ .Params.match_date }}T{{ .Params.match_time }}:00",
+    "endDate": "{{ .Params.match_date }}T22:00:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+        "@type": "Place",
+        "name": "Stadium"
+    },
+    "homeTeam": {
+        "@type": "SportsTeam",
+        "name": "{{ .Params.team_home }}"
+    },
+    "awayTeam": {
+        "@type": "SportsTeam", 
+        "name": "{{ .Params.team_away }}"
+    },
+    "sport": "Football",
+    "description": "{{ $desc }}"
+}
+</script>
+{{ end }}

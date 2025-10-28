@@ -1,0 +1,63 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="container">
+        <h1 class="hero-title">{{ .Site.Title }}</h1>
+        <p class="hero-description">{{ .Site.Params.description }}</p>
+    </div>
+</section>
+
+
+<section class="all-matches">
+    <div class="container">
+        <h2 class="section-title">Tüm Maçlar</h2>
+        
+        <!-- Filter buttons -->
+        <div class="grid-filters">
+            <button class="filter-btn active" data-filter="all">Tüm Maçlar</button>
+            <button class="filter-btn" data-filter="live">Canlı Yayında</button>
+            <button class="filter-btn" data-filter="scheduled">Yaklaşan</button>
+            <button class="filter-btn" data-filter="finished">Tamamlandı</button>
+        </div>
+        
+        <!-- Matches container -->
+        <div id="matchesContainer" class="matches-grid__inner">
+            <!-- Initial matches will be loaded here by JavaScript -->
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button id="loadMore" class="btn btn-load-more">
+                Daha Fazla Eşleşme Yükle
+            </button>
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+                Loading matches...
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hidden data storage -->
+<script type="application/json" id="postsData">
+{
+    "allPosts": [
+        {{ range $index, $post := where .Site.RegularPages "Section" "posts" }}
+        {
+            "title": "{{ $post.Title }}",
+            "permalink": "{{ $post.RelPermalink }}",
+            "team_home": "{{ $post.Params.team_home }}",
+            "team_away": "{{ $post.Params.team_away }}",
+            "league": "{{ $post.Params.league }}",
+            "match_date": "{{ $post.Params.match_date }}",
+            "match_time": "{{ $post.Params.match_time }}",
+            "status": "{{ $post.Params.status }}",
+            "featured_image": "{{ $post.Params.featured_image }}",
+            "excerpt": "{{ $post.Params.excerpt }}",
+            "author": "{{ $.Site.Params.author | default "Selçuksports" }}"
+        }{{ if ne (add $index 1) (len (where .Site.RegularPages "Section" "posts")) }},{{ end }}
+        {{ end }}
+    ]
+}
+</script>
+
+{{ end }}

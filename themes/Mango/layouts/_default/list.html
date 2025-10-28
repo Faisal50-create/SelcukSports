@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">{{ .Title }}</h1>
+        {{ with .Description }}
+        <p class="page-description">{{ . }}</p>
+        {{ end }}
+    </div>
+</section>
+
+<section class="matches-page">
+    <div class="container">
+        {{ if eq .Type "posts" }}
+            {{ partial "post-grid.html" .Pages }}
+        {{ else }}
+            <div class="page-content">
+                {{ .Content }}
+            </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

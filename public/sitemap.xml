@@ -1,126 +1,119 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-10-27T19:37:45&#43;05:00</lastmod>
     <priority>1.0</priority>
+    <changefreq>daily</changefreq>
   </url>
 
   
   
-  <url>
-    <loc>http://localhost:1313/about/</loc>
-    <lastmod>2023-01-01T00:00:00Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+      <loc>http://localhost:1313/posts/real-madrid-vs-barcelona/</loc>
+      
+        <lastmod>2025-10-19T14:58:06&#43;00:00</lastmod>
+      
+      
+        <priority>0.8</priority>
+      
+      <changefreq>weekly</changefreq>
+    </url>
   
-
+    <url>
+      <loc>http://localhost:1313/posts/real-madrid-vs-barcelona/</loc>
+      
+        <lastmod>2025-10-19T14:34:09&#43;00:00</lastmod>
+      
+      
+        <priority>0.8</priority>
+      
+      <changefreq>weekly</changefreq>
+    </url>
   
+    <url>
+      <loc>http://localhost:1313/posts/real-madrid-vs-barcelona/</loc>
+      
+        <lastmod>2025-10-19T14:34:02&#43;00:00</lastmod>
+      
+      
+        <priority>0.8</priority>
+      
+      <changefreq>weekly</changefreq>
+    </url>
   
+    <url>
+      <loc>http://localhost:1313/posts/real-madrid-vs-barcelona/</loc>
+      
+        <lastmod>2025-10-19T14:33:47&#43;00:00</lastmod>
+      
+      
+        <priority>0.8</priority>
+      
+      <changefreq>weekly</changefreq>
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2023-01-01T00:00:00Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+      <loc>http://localhost:1313/posts/real-madrid-vs-barcelona/</loc>
+      
+        <lastmod>2025-10-19T14:33:43&#43;00:00</lastmod>
+      
+      
+        <priority>0.8</priority>
+      
+      <changefreq>weekly</changefreq>
+    </url>
   
-
+    <url>
+      <loc>http://localhost:1313/posts/real-madrid-vs-barcelona/</loc>
+      
+        <lastmod>2025-10-19T14:33:37&#43;00:00</lastmod>
+      
+      
+        <priority>0.8</priority>
+      
+      <changefreq>weekly</changefreq>
+    </url>
   
+    <url>
+      <loc>http://localhost:1313/posts/real-madrid-vs-barcelona/</loc>
+      
+        <lastmod>2024-03-15T10:00:00&#43;00:00</lastmod>
+      
+      
+        <priority>0.8</priority>
+      
+      <changefreq>weekly</changefreq>
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/premier-league-inglaterra-la-liga-m%C3%A1s-competitiva-del-mundo/</loc>
-    <lastmod>2025-09-08T04:42:42Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+      <loc>http://localhost:1313/about/</loc>
+      
+      
+        <priority>0.9</priority>
+      
+      <changefreq>weekly</changefreq>
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/serie-a-italia-la-cuna-del-f%C3%BAtbol-t%C3%A1ctico-en-europa/</loc>
-    <lastmod>2025-09-08T04:38:52Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+      <loc>http://localhost:1313/contact/</loc>
+      
+      
+        <priority>0.9</priority>
+      
+      <changefreq>weekly</changefreq>
+    </url>
   
-  <url>
-    <loc>http://localhost:1313/la-liga-espa%C3%B1a-el-campeonato-de-f%C3%BAtbol-m%C3%A1s-prestigioso-de-espa%C3%B1a/</loc>
-    <lastmod>2025-09-08T04:36:21Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/copa-sudamericana-el-segundo-torneo-m%C3%A1s-importante-de-sudam%C3%A9rica/</loc>
-    <lastmod>2025-09-08T04:22:16Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/copa-libertadores/</loc>
-    <lastmod>2025-09-08T04:12:01Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/champions-league-la-%C3%A9lite-del-f%C3%BAtbol-europeo/</loc>
-    <lastmod>2025-09-08T04:00:16Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/liga-1-max/</loc>
-    <lastmod>2025-08-30T08:07:28Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/espn7/</loc>
-    <lastmod>2025-08-30T08:00:07Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/espn6/</loc>
-    <lastmod>2025-08-30T07:49:45Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/espn5/</loc>
-    <lastmod>2025-08-30T07:48:45Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/espn4/</loc>
-    <lastmod>2025-08-30T07:46:19Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/espn3/</loc>
-    <lastmod>2025-08-30T07:45:24Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/espn1/</loc>
-    <lastmod>2025-08-30T12:35:54&#43;05:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+      <loc>http://localhost:1313/dmc/</loc>
+      
+      
+        <priority>0.9</priority>
+      
+      <changefreq>weekly</changefreq>
+    </url>
   
 
 </urlset>

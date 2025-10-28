@@ -1,28 +1,25 @@
-<header class="site-header" role="banner" itemscope itemtype="https://schema.org/WPHeader" style="background: var(--header-bg); border-bottom: 1px solid var(--border);">
-  <div class="container">
-    <div class="header-content">
-      <!-- Logo -->
- <!-- Logo --> <a href="/" class="site-logo"> <img src="/images/logo1.webp" alt="DazcFutbolTV Logo" width="180" height="45" loading="eager" decoding="async"> </a>
-    
-      
-      <!-- Mobile Menu Button -->
-      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</button>
-      
-      <!-- Main Navigation -->
-      <nav class="main-navigation" aria-label="Main navigation">
-        <ul class="menu">
-          <li><a href="/" style="color: var(--header-text);">Home</a></li>
-          <li><a href="/blog" style="color: var(--header-text);">Blog</a></li>
-          <li><a href="/about" style="color: var(--header-text);">About</a></li>
-        </ul>
-      </nav>
-      
-      <!-- Theme Toggle -->
-      {{ partial "theme-toggle.html" . }}
+<header class="header" role="banner">
+    <div class="container">
+        <div class="header__inner">
+            <a href="{{ "http://localhost:1313/" | relURL }}" class="logo" aria-label="Selçuksports">
+                <img src="{{ "uploads/logo.png" | relURL }}" alt="{{ .Site.Title }}" width="150" height="40">
+            </a>
+            
+            <nav class="nav" role="navigation">
+                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    {{ $current := . }}
+                    <li><a href="{{ "/" | relURL }}" {{ if .IsHome }}aria-current="page"{{ end }}>Home</a></li>
+                    <li><a href="{{ "dmc" | relURL }}" {{ if eq .Kind "section" }}aria-current="page"{{ end }}>DMC</a></li>
+                    <li><a href="{{ "about" | relURL }}" {{ if eq .Title "About" }}aria-current="page"{{ end }}>About</a></li>
+                    <li><a href="{{ "contact" | relURL }}" {{ if eq .Title "Contact" }}aria-current="page"{{ end }}>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </div>
 </header>

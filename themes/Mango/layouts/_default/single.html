@@ -1,15 +1,92 @@
 {{ define "main" }}
-<article class="post">
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
 
-  {{ if .Params.tags }}
-  <div class="post-tags">
-    <strong>Tags:</strong>
-    {{ range .Params.tags }}
-      <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
-    {{ end }}
-  </div>
-  {{ end }}
-</article>
+{{ if or .Params.team_home .Params.team_away }}
+  <!-- ✅ MATCH PAGE LAYOUT -->
+  <article class="match-detail" itemscope itemtype="https://schema.org/SportsEvent">
+      <header class="match-header">
+          <div class="container">
+              <div class="match-header__content">
+                  <div class="match-teams">
+                      <div class="team home-team">
+                          <h1 itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+                              <span itemprop="name">{{ .Params.team_home }}</span>
+                          </h1>
+                      </div>
+                      
+                      <div class="match-vs">
+                          <span class="vs">VS</span>
+                          <time datetime="{{ .Params.match_date }}T{{ .Params.match_time }}" itemprop="startDate">
+                              {{ dateFormat "January 2, 2006" .Params.match_date }}<br>
+                              at {{ .Params.match_time }}
+                          </time>
+                      </div>
+                      
+                      <div class="team away-team">
+                          <h1 itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+                              <span itemprop="name">{{ .Params.team_away }}</span>
+                          </h1>
+                      </div>
+                  </div>
+                  
+                  <div class="match-meta">
+                      <span class="league" itemprop="sport">{{ .Params.league }}</span>
+                      <span class="status {{ .Params.status }}">{{ .Params.status }}</span>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+      {{ with .Params.featured_image }}
+      <div class="match-image">
+          <div class="container">
+              <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy" itemprop="image">
+          </div>
+      </div>
+      {{ end }}
+
+      <div class="match-content">
+          <div class="container">
+              <div class="content-wrapper">
+                  <div class="match-details">
+                      {{ .Content }}
+                  </div>
+                  
+                  <aside class="match-sidebar">
+                      <div class="match-info">
+                          <h3>Match Information</h3>
+                          <ul>
+                              <li><strong>Date:</strong> {{ dateFormat "January 2, 2006" .Params.match_date }}</li>
+                              <li><strong>Time:</strong> {{ .Params.match_time }}</li>
+                              <li><strong>League:</strong> {{ .Params.league }}</li>
+                              <li><strong>Status:</strong> <span class="status {{ .Params.status }}">{{ .Params.status }}</span></li>
+                          </ul>
+                      </div>
+                      
+                      <div class="share-buttons">
+                          <h3>Share This Match</h3>
+                          <div class="share-links">
+                              <button class="share-btn twitter" data-share="twitter" aria-label="Share on Twitter">
+                                  Twitter
+                              </button>
+                              <button class="share-btn facebook" data-share="facebook" aria-label="Share on Facebook">
+                                  Facebook
+                              </button>
+                          </div>
+                      </div>
+                  </aside>
+              </div>
+          </div>
+      </div>
+  </article>
+
+{{ else }}
+  <!-- ✅ NORMAL PAGE LAYOUT (About, Contact, etc.) -->
+  <main class="container mx-auto px-6 py-12 max-w-3xl">
+    <article class="prose prose-lg">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+  </main>
+{{ end }}
+
 {{ end }}

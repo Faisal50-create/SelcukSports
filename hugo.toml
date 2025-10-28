@@ -1,85 +1,65 @@
-baseURL = "https://dazcfutboltv.me/"
-languageCode = "es-ES"
-title = "DazcFutbolTV - Partidos en Directo y Canales Deportivos"
+baseURL = "https://yoursite.netlify.app/"
+languageCode = "en-us"
+title = "Selçuksports Canlı Maç İzle — Güncel HD Yayın Girişi"
 theme = "Mango"
 enableRobotsTXT = true
+enableEmoji = true
 
+# ✅ Disable all auto-generated pages (tags, categories, sections, rss, etc.)
+disableKinds = ["taxonomy", "taxonomyTerm", "section", "RSS", "robotsTXT"]
+
+# ✅ Pagination
+[pagination]
+  pagerSize = 10
+
+# ✅ SEO Meta Description & Author Info
 [params]
-  description = "En dazcfutboltv puedes ver fútbol en vivo online gratis. Disfruta LaLiga, Champions, Copa Libertadores, Sudamericana, ESPN y FOX Sports en HD"
-  author = "DazcFutbolTV"
-  copyright = "© 2024 DazcFutbolTV. All Rights Reserved."
-  keywords = ["DazcFutbolTV", "dazcfutbolios", "DazcFutboltv App", "futbol en vivo", "Partidos de futbol"]
+  description = "Selçuksports resmi giriş 2025 — HD kalitede canlı maç izle, güncel yayın linkleri ve en yeni adres bilgilerini anında öğren. Tıklayın ve yayını başlatın!"
+  author = "Selçuksports"
+  twitter = "@sportscore"
 
-  logo = "/images/logo.png"
-  favicon = "/favicon.ico"
-  og_image = "/images/social-preview.jpg"
+  # Social links
+  social = [
+    "https://twitter.com",
+    "https://facebook.com",
+    "https://instagram.com"
+  ]
 
-[params.social]
-  twitter = "https://twitter.com/YourHandle"
-  facebook = "https://facebook.com/YourPage"
-  instagram = "https://instagram.com/YourProfile"
-  youtube = "https://youtube.com/@YourChannel"
+  # Contact info
+  contact_email = "contact@sportscore.com"
 
-# Menus
-[[menu.main]]
-  identifier = "home"
-  name = "Home"
-  url = "/"
-  weight = 1
+# ✅ Correct permalink pattern
+[permalinks]
+  posts = "/:section/:slug/"
 
-[[menu.main]]
-  identifier = "matches"
-  name = "Live Matches"
-  url = "/matches/"
-  weight = 2
+# ✅ Outputs
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+  page = ["HTML"]
 
-[[menu.main]]
-  identifier = "blog"
-  name = "Blog"
-  url = "/blog/"
-  weight = 3
+# ✅ Optional build & optimization settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
 
-[[menu.main]]
-  identifier = "about"
-  name = "About"
-  url = "/about/"
-  weight = 4
+[imaging]
+  quality = 85
+  resampleFilter = "CatmullRom"
 
-# Footer
-[[menu.footer]]
-  name = "Privacy Policy"
-  url = "/privacy/"
+# ✅ Disable taxonomies completely
+[taxonomies]
+  category = ""
+  tag = ""
 
-[[menu.footer]]
-  name = "DMCA"
-  url = "/dmca/"
-
-[[menu.footer]]
-  name = "Contact"
-  url = "/contact/"
-
-[services.googleAnalytics]
-  ID = "G-XXXXXXXXXX"
-
-# Sitemap
+# ✅ Sitemap config (optional)
 [sitemap]
   changefreq = "daily"
-  priority = 0.5
+  priority = 0.8
   filename = "sitemap.xml"
 
-# Outputs
-[outputs]
-  home = ["HTML", "RSS", "SITEMAP"]   # homepage + sitemap
-  section = ["HTML", "SITEMAP"]       # posts sections bhi sitemap me
-  taxonomy = ["HTML"]                 # categories/tags sitemap se hata diye
-  term = ["HTML"]                     # terms bhi sitemap se hata diye
-  page = ["HTML", "SITEMAP"]          # individual posts/pages sitemap me
-
-# Taxonomies
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-
-# Permalinks
-[permalinks]
-  blog = "/:slug/"   # posts = example.com/post-name/

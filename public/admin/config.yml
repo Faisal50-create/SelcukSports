@@ -1,32 +1,55 @@
-local_backend: true
-
 backend:
   name: git-gateway
-  branch: main # Change to your default branch
-
-media_folder: "static/uploads"
-public_folder: "/uploads"
+  branch: main
+local_backend: true
+media_folder: "static/images"
+public_folder: "/images"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "posts"
+    label: "Match Posts"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
-    identifier_field: "title"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Home Team", name: "team_home", widget: "string" }
+      - { label: "Away Team", name: "team_away", widget: "string" }
+      - { label: "League", name: "league", widget: "string" }
+      - { label: "Match Date", name: "match_date", widget: "date" }
+      - { label: "Match Time", name: "match_time", widget: "string" }
+      - { label: "Status", name: "status", widget: "select", options: ["scheduled", "live", "finished"] }
       - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
-      - { label: "Categories", name: "categories", widget: "list", required: false }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Description (short)", name: "description", widget: "text", required: false }
-      - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
-      - { label: "Meta description", name: "meta_description", widget: "text", required: false }
-      - { label: "Canonical URL", name: "canonical", widget: "string", required: false }
-      - label: "SEO Keywords"
-        name: "keywords"
-        widget: "list"
-        field: { label: "Keyword", name: "keyword", widget: "string" }
-        required: false
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Author", name: "author", widget: "string", default: "Admin" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Privacy Policy"
+        name: "privacy"
+        file: "content/privacy.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
