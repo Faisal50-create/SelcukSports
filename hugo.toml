@@ -1,4 +1,4 @@
-baseURL = "https://yoursite.netlify.app/"
+bbaseURL = "https://selcuksports.netlify.app/"
 languageCode = "en-us"
 title = "Selçuksports Canlı Maç İzle — Güncel HD Yayın Girişi"
 theme = "Mango"
@@ -56,10 +56,4 @@ disableKinds = ["taxonomy", "taxonomyTerm", "section", "RSS", "robotsTXT"]
 [taxonomies]
   category = ""
   tag = ""
-
-# ✅ Sitemap config (optional)
-[sitemap]
-  changefreq = "daily"
-  priority = 0.8
-  filename = "sitemap.xml"
 
