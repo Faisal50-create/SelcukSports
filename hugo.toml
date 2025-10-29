@@ -57,3 +57,5 @@ disableKinds = ["taxonomy", "taxonomyTerm", "section", "RSS", "robotsTXT"]
   category = ""
   tag = ""
 
+
+
