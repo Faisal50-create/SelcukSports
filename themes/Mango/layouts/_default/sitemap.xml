@@ -1,18 +1,18 @@
 {{- print "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ✅ Include homepage with highest priority -->
+  <!-- ✅ Homepage -->
   <url>
-    <loc>{{ .Site.BaseURL }}</loc>
+    <loc>{{ .Site.BaseURL | absURL }}</loc>
     <lastmod>{{ now.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
 
-  <!-- ✅ Include all regular pages (posts + manual pages) -->
+  <!-- ✅ All Regular Pages -->
   {{ range .Site.RegularPages }}
     <url>
-      <loc>{{ .Permalink }}</loc>
+      <loc>{{ .Permalink | absURL }}</loc>
       {{ with .Lastmod }}
         <lastmod>{{ .Format "2006-01-02T15:04:05-07:00" }}</lastmod>
       {{ end }}
