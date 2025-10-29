@@ -1,7 +1,6 @@
 {{- print "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ✅ Homepage -->
   <url>
     <loc>{{ .Site.BaseURL | absURL }}</loc>
     <lastmod>{{ now.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
@@ -9,7 +8,6 @@
     <changefreq>daily</changefreq>
   </url>
 
-  <!-- ✅ All Regular Pages -->
   {{ range .Site.RegularPages }}
     <url>
       <loc>{{ .Permalink | absURL }}</loc>
