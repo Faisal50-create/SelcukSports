@@ -1,4 +1,4 @@
-bbaseURL = "https://selcuksports.netlify.app/"
+baseURL = "https://selcuksports.netlify.app/"
 languageCode = "en-us"
 title = "Selçuksports Canlı Maç İzle — Güncel HD Yayın Girişi"
 theme = "Mango"
