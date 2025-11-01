@@ -7,7 +7,7 @@ team_away: "that "
 league: "mulisn "
 match_date: 2025-11-01T15:49:39.105Z
 match_time: 12:30
-status: live
+status: scheduled
 excerpt: |-
   Sat Nov 01 2025 20:49:39 GMT+0500 (Pakistan Standard Time)
   Home Team: Word
