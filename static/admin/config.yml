@@ -4,7 +4,7 @@ backend:
 local_backend: true
 media_folder: "static/images"
 public_folder: "/images"
-
+site_domain: https://selcuksports.tech/
 collections:
   - name: "posts"
     label: "Match Posts"
