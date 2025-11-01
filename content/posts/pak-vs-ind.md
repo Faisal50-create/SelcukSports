@@ -15,7 +15,5 @@ author: Faisal Khan
 ```
 {{< watchlive url="https://selcuksports.tech/" >}}
 {{< watchlive url="https://selcuksports-hd-link.com/match-stream" >}}
-{{< watchlive url="https://selcuksports-hd-link.com/match-stream" >}}
-
 
 ```
