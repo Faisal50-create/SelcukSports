@@ -1,6 +1,6 @@
 # ✅ robots.txt for Selçuksports Canlı Maç İzle — Güncel HD Yayın Girişi
 # Last Updated: 2025-10-26
-# Site: https://yoursite.netlify.app/
+# Site:https://selcuksports.tech/
 
 User-agent: *
 # Allow all main content
@@ -22,8 +22,6 @@ Disallow: /search/
 Crawl-delay: 10
 
 # Sitemap for better indexing
-Sitemap: https://yoursite.netlify.app/sitemap.xml
 
-# Extra hint for Googlebot (content language: Turkish)
-User-agent: Googlebot
-Allow: /
+Sitemap: https://selcuksports.tech/sitemap.xml
+

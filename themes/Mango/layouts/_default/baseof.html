@@ -3,6 +3,37 @@
 <head>
     
     {{ partial "head.html" . }}
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SelçukSports",
+  "url": "https://selcuksports.tech/",
+  "alternateName": "SelçukSports Canlı Maç İzle",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://selcuksports.tech/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SelçukSports",
+    "url": "https://selcuksports.tech/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://selcuksports.tech/images/logo.png"
+    },
+    "sameAs": [
+      "https://facebook.com/selcuksports",
+      "https://twitter.com/selcuksports",
+      "https://instagram.com/selcuksports"
+    ]
+  },
+  "inLanguage": "tr",
+  "description": "Selçuksports resmi giriş 2025 — HD kalitede canlı maç izle, güncel yayın linkleri ve en yeni adres bilgilerini anında öğren. Tıklayın ve yayını başlatın"
+}
+</script>
+
 </head>
 <body>
     {{ partial "header.html" . }}
