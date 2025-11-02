@@ -20,7 +20,7 @@ author: Selçuksports
 ---
 <!--StartFragment-->
 
-# 🏆 Manisa FK – Amedspor Maçı Ne Zaman, Saat K
+# Manisa FK – Amedspor Maçı Ne Zaman, Saat K
 
 Trendyol 1. Lig heyecanı tüm hızıyla devam ediyor. 2025-2026 sezonunun 11. haftasında **Manisa FK**, evinde **Amedspor**’u konuk ediyor. Futbolseverler, bu kritik mücadelenin **yayın saati, kanalı ve maçın detaylarını** m
 
