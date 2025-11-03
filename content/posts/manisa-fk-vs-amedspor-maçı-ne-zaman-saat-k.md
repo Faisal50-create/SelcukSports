@@ -24,33 +24,27 @@ author: Selçuksports
 
 Trendyol 1. Lig heyecanı tüm hızıyla devam ediyor. 2025-2026 sezonunun 11. haftasında **Manisa FK**, evinde **Amedspor**’u konuk ediyor. Futbolseverler, bu kritik mücadelenin **yayın saati, kanalı ve maçın detaylarını** m
 
-- - -
-
-## 📅 Manisa FK
+## Manisa FK
 
 **Manis** karşılaşm**02 Kasım 2025 Pazar günü** oynanacak.\
 Mücadele, **saat 13:30’da** başlayacak.\
 Trendyol 1. Lig’de orta sıraları yakından ilgilendiren bu maç, hafta sonu
 
-- - -
-
-## 🏟️ Maç Nerede Oynanacak?
+## Maç Nerede Oynanacak?
 
 Karşılaşma, Manisa ekibinin evi olan **Mümin Özkasap Stadyumu**’nda oynanacak. Yaklaşık 10 bin futbolseverin tribünlerde olma
 
-- - -
-
-## 📺 Hangi Kanalda Yayınlanacak?
+## Hangi Kanalda Yayınlanacak?
 
 Manisa FK – Amedspor maçı,
 
-### 🎯 **Bein Sports Max 1 (Şifreli Yayın)**
+### **Bein Sports Max 1 (Şifreli Yayın)**
 
 * **Platformlar:** Digiturk 82, Ka
 * **Erişim:** Türksat uydusu ve Bein Connect platform
 * **Kalite:** HD yayın kalitesiyle müsabakayı canlı takip edebilirsiniz.
 
-### 🎯 **TRT Spor (Şifresiz Yayın)**
+### **TRT Spor (Şifresiz Yayın)**
 
 * **Platformlar:** Digiturk 86, D-Smart 86, Kablo TV 133, Tivibu 85, Turkcell TV+ 70
 * **Erişim:** Türksat
@@ -58,7 +52,7 @@ Manisa FK – Amedspor maçı,
 
 - - -
 
-## ⚽ Takımların Son Durumu
+## Takımların Son Durumu
 
 ### **Manisa FK**
 
@@ -70,7 +64,7 @@ Amedspor ise bu sezon deplasm
 
 - - -
 
-## 📊 Olası İlk 11’ler (
+## Olası İlk 11’ler (
 
 **Manisa FK:** Göktuğ – Oğuzhan, Hakan,
 
@@ -80,7 +74,7 @@ Amedspor ise bu sezon deplasm
 
 - - -
 
-## 🔍 Maç Öncesi İstatistikler ve Öne Çıkanlar
+## Maç Öncesi İstatistikler ve Öne Çıkanlar
 
 * İki takım daha önce **5 ke** karşılaştı. Bu maçlarda Manisa FK **2 galibiyet**, Amedspor **2 galibiyet** alırken, **1 maç berabere** sonuçlandı.
 * Manisa FK evinde oynadığı son 4 maçta **yenilgi yüzü görmedi**.
@@ -89,7 +83,7 @@ Amedspor ise bu sezon deplasm
 
 - - -
 
-## 🗣️ Uzman Yorumu
+## Uzman Yorumu
 
 Futbol yorumcularına göre bu mücadele, orta alan mücadelesinin ön planda olacağı, dengeli bir maç olacak.\
 Manisa FK’nın saha avantajı önemli bir faktör olsa da, Amedspor’un kontratak gücü maçı zorlaştırabilir.
@@ -99,7 +93,7 @@ Manisa FK’nın saha avantajı önemli bir faktör olsa da, Amedspor’un kontr
 
 - - -
 
-## 🔗 Yayın Bilgileri Özeti
+## Yayın Bilgileri Özeti
 
 | Bilgi     | Detay                                            |
 | --------- | ------------------------------------------------ |
@@ -112,7 +106,7 @@ Manisa FK’nın saha avantajı önemli bir faktör olsa da, Amedspor’un kontr
 
 - - -
 
-## ✅ Güvenilir Kaynaklar ve Not
+## üvenilir Kaynaklar ve Not
 
 Bu yayın bilgileri, **Bein Sports** ve **TRT Spor**’un resmi yayın akışlarından derlenmiştir.\
 Yayın saati değişiklik gösterebilir; resmi kanallardan günce
