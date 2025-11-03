@@ -13,7 +13,7 @@ excerpt: A proud national struggle is on the horizon. A fierce competition will
   the 6th Islamic Solidarity Games, taking place in Riyadh, the capital of Saudi
   Arabia. Here are all the details.
 tags:
-  - "# Türkiye – İran Maçı"
+  - Türkiye – İran Maçı
 author: Admin
 ---
 <!--StartFragment-->
