@@ -5,7 +5,7 @@ slug: "Türkiye vs İran Maçı "
 team_home: Türkiye
 team_away: " İran"
 league: National Volleyball Teams
-match_date: 2025-11-03T15:49:28.765Z
+match_date: 2025-11-04T15:49:28.765Z
 match_time: 16:00
 status: scheduled
 excerpt: A proud national struggle is on the horizon. A fierce competition will
