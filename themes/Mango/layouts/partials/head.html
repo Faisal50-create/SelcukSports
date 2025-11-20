@@ -1,31 +1,54 @@
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- ✅ Basic SEO -->
-  <title>{{ if .Title }}{{ .Title }} {{ end }}</title>
-  <meta name="description" content="{{ .Description }}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Title -->
+<title>{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+<!-- Description -->
+{{ if eq .Section "posts" }}
+  <!-- Posts managed via CMS -->
+  <meta name="description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else }}{{ .Title }} canlı maç izle {{ end }}">
+  {{ if .Params.tags }}
+    <meta name="keywords" content="{{ delimit .Params.tags ", " }}">
+  {{ end }}
+{{ else }}
+  <!-- Pages or Homepage -->
+  <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   {{ if .Params.keywords }}
-  <meta name="keywords" content="{{ delimit .Params.keywords ", " }}">
+    <meta name="keywords" content="{{ delimit .Params.keywords ", " }}">
   {{ end }}
-  <!-- ✅ Open Graph -->
-  <meta property="og:title" content="{{ .Title }}">
-  <meta property="og:description" content="{{ .Description }}">
-  <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Selçuksports Canlı Maç İzle — Güncel HD Yayın Girişi">
-  <!-- ✅ Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ .Title }}">
-  <meta name="twitter:description" content="{{ .Description }}">
-  <!-- ✅ Canonical + Favicon -->
-  <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <!-- ✅ Styles -->
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="preload" href="/js/main.js" as="script">
-  <!-- ✅ JSON-LD Schema (keep last) -->
-  {{ if .Params.schema }}
-  <script type="application/ld+json">
-    {{ .Params.schema | safeHTML }}
-  </script>
-  {{ end }}
+{{ end }}
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ .Title }}">
+{{ if eq .Section "posts" }}
+<meta property="og:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else }}{{ .Title }} canlı maç izle {{ end }}">
+{{ else }}
+<meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ end }}
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Selçuksports Canlı Maç İzle — Güncel HD Yayın Girişi">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+{{ if eq .Section "posts" }}
+<meta name="twitter:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else }}{{ .Title }} canlı maç izle {{ end }}">
+{{ else }}
+<meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ end }}
+
+<!-- Canonical -->
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<!-- Styles + Scripts -->
+<link rel="stylesheet" href="/css/main.css">
+<link rel="preload" href="/js/main.js" as="script">
+
+<!-- JSON-LD Schema -->
+{{ if .Params.schema }}
+<script type="application/ld+json">
+  {{ .Params.schema | safeHTML }}
+</script>
+{{ end }}

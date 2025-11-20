@@ -297,3 +297,25 @@ function initShareButtons() {
         });
     });
 }
+// button code //
+
+    document.getElementById('watchNowBtn').addEventListener('click', function(e) {
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = x + 'px';
+      ripple.style.top = y + 'px';
+      this.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
+
+      // Redirect logic (replace with your live URL)
+      setTimeout(() => {
+        alert("Redirecting to live stream...");
+        // window.location.href = "your-live-stream-url-here";
+      }, 300);
+    });
+  

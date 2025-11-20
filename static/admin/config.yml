@@ -1,10 +1,14 @@
 backend:
   name: git-gateway
   branch: main
+
 local_backend: true
+
 media_folder: "static/images"
 public_folder: "/images"
+
 site_domain: https://selcuksports.tech/
+
 collections:
   - name: "posts"
     label: "Match Posts"
@@ -15,6 +19,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Slug", name: "slug", widget: "string" }
+
       - { label: "Home Team", name: "team_home", widget: "string" }
       - { label: "Away Team", name: "team_away", widget: "string" }
       - { label: "League", name: "league", widget: "string" }
@@ -22,8 +27,11 @@ collections:
       - { label: "Match Time", name: "match_time", widget: "string" }
       - { label: "Status", name: "status", widget: "select", options: ["scheduled", "live", "finished"] }
       - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Tags", name: "tags", widget: "list", default: [] }
+
+      # SEO FIELDS (relabeled)
+      - { label: "Meta Description (Excerpt)", name: "excerpt", widget: "text" }
+      - { label: "Keywords / Tags", name: "tags", widget: "list", default: [] }
+
       - { label: "Author", name: "author", widget: "string", default: "Admin" }
       - { label: "Body", name: "body", widget: "markdown" }
 
