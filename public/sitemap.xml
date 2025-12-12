@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://selcuksports.tech/</loc>
-    <lastmod>2025-12-12T20:48:46&#43;05:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-12-12T21:12:17&#43;05:00</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
 
   
     <url>
-      <loc>https://selcuksports.tech/posts/ey%C3%BCpspor-vs-fatih-karag%C3%BCmr%C3%BCk/</loc>
+      <loc>http://localhost:1313/posts/ey%C3%BCpspor-vs-fatih-karag%C3%BCmr%C3%BCk/</loc>
       
         <lastmod>2025-11-16T15:47:20&#43;00:00</lastmod>
       
@@ -21,7 +21,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/boluspor-vs-amed-sportif/</loc>
+      <loc>http://localhost:1313/posts/boluspor-vs-amed-sportif/</loc>
       
         <lastmod>2025-11-16T05:52:33&#43;00:00</lastmod>
       
@@ -32,7 +32,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/band%C4%B1rmaspor-vs-corum-fk/</loc>
+      <loc>http://localhost:1313/posts/band%C4%B1rmaspor-vs-corum-fk/</loc>
       
         <lastmod>2025-11-16T05:42:17&#43;00:00</lastmod>
       
@@ -43,7 +43,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/manisa-futbol-kulubu-vs-adana-demirspor/</loc>
+      <loc>http://localhost:1313/posts/manisa-futbol-kulubu-vs-adana-demirspor/</loc>
       
         <lastmod>2025-11-16T05:34:38&#43;00:00</lastmod>
       
@@ -54,7 +54,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/adana-demirspor-vs-hatayspor/</loc>
+      <loc>http://localhost:1313/posts/adana-demirspor-vs-hatayspor/</loc>
       
         <lastmod>2025-11-15T15:40:57&#43;00:00</lastmod>
       
@@ -65,7 +65,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/serik-spor-vs-sariyer/</loc>
+      <loc>http://localhost:1313/posts/serik-spor-vs-sariyer/</loc>
       
         <lastmod>2025-11-15T15:34:55&#43;00:00</lastmod>
       
@@ -76,7 +76,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/esenler-erokspor-vs-sivasspor/</loc>
+      <loc>http://localhost:1313/posts/esenler-erokspor-vs-sivasspor/</loc>
       
         <lastmod>2025-11-15T15:31:29&#43;00:00</lastmod>
       
@@ -87,7 +87,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/van-spor-kulubu-vs-keciorengucu/</loc>
+      <loc>http://localhost:1313/posts/van-spor-kulubu-vs-keciorengucu/</loc>
       
         <lastmod>2025-11-15T15:28:35&#43;00:00</lastmod>
       
@@ -98,7 +98,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/umraniyespor-vs-bodrum-fk/</loc>
+      <loc>http://localhost:1313/posts/umraniyespor-vs-bodrum-fk/</loc>
       
         <lastmod>2025-11-15T15:24:54&#43;00:00</lastmod>
       
@@ -109,7 +109,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/igdir-fk-vs-erzurumspor-fk/</loc>
+      <loc>http://localhost:1313/posts/igdir-fk-vs-erzurumspor-fk/</loc>
       
         <lastmod>2025-11-15T15:21:07&#43;00:00</lastmod>
       
@@ -120,7 +120,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/hatayspor-vs-pendikspor/</loc>
+      <loc>http://localhost:1313/posts/hatayspor-vs-pendikspor/</loc>
       
         <lastmod>2025-11-15T15:15:45&#43;00:00</lastmod>
       
@@ -131,7 +131,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/istanbulspor-vs-sakaryaspor/</loc>
+      <loc>http://localhost:1313/posts/istanbulspor-vs-sakaryaspor/</loc>
       
         <lastmod>2025-11-15T15:12:20&#43;00:00</lastmod>
       
@@ -142,7 +142,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/boluspor-vs-amed-sportif/</loc>
+      <loc>http://localhost:1313/posts/boluspor-vs-amed-sportif/</loc>
       
         <lastmod>2025-11-15T04:08:27&#43;00:00</lastmod>
       
@@ -153,7 +153,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/band%C4%B1rmaspor-vs-corum-fk/</loc>
+      <loc>http://localhost:1313/posts/band%C4%B1rmaspor-vs-corum-fk/</loc>
       
         <lastmod>2025-11-15T04:04:09&#43;00:00</lastmod>
       
@@ -164,7 +164,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/manisa-futbol-kulubu-vs-adana-demirspor/</loc>
+      <loc>http://localhost:1313/posts/manisa-futbol-kulubu-vs-adana-demirspor/</loc>
       
         <lastmod>2025-11-15T03:59:10&#43;00:00</lastmod>
       
@@ -175,7 +175,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/galatasaray-vs-gen%C3%A7lerbirli%C4%9Fi/</loc>
+      <loc>http://localhost:1313/posts/galatasaray-vs-gen%C3%A7lerbirli%C4%9Fi/</loc>
       
         <lastmod>2025-11-14T15:52:01&#43;00:00</lastmod>
       
@@ -186,7 +186,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/kayserispor-vs-gaziantep-fk/</loc>
+      <loc>http://localhost:1313/posts/kayserispor-vs-gaziantep-fk/</loc>
       
         <lastmod>2025-11-14T15:35:06&#43;00:00</lastmod>
       
@@ -197,7 +197,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/fenerbah%C3%A7e-vs-rizespora/</loc>
+      <loc>http://localhost:1313/posts/fenerbah%C3%A7e-vs-rizespora/</loc>
       
         <lastmod>2025-11-14T15:27:20&#43;00:00</lastmod>
       
@@ -208,7 +208,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/t%C3%BCrkiye-vs-iran-ma%C3%A7%C4%B1/</loc>
+      <loc>http://localhost:1313/posts/t%C3%BCrkiye-vs-iran-ma%C3%A7%C4%B1/</loc>
       
         <lastmod>2025-11-03T15:49:28&#43;00:00</lastmod>
       
@@ -219,7 +219,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/manisa-fk-vs-amedspor/</loc>
+      <loc>http://localhost:1313/posts/manisa-fk-vs-amedspor/</loc>
       
         <lastmod>2025-11-02T04:18:58&#43;00:00</lastmod>
       
@@ -230,7 +230,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/rizespor-vs-fenerbah%C3%A7e/</loc>
+      <loc>http://localhost:1313/posts/rizespor-vs-fenerbah%C3%A7e/</loc>
       
         <lastmod>2025-10-19T14:58:06&#43;00:00</lastmod>
       
@@ -241,7 +241,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/posts/alanyaspor-vs-kas%C4%B1mpa%C5%9Fa/</loc>
+      <loc>http://localhost:1313/posts/alanyaspor-vs-kas%C4%B1mpa%C5%9Fa/</loc>
       
         <lastmod>2025-10-19T14:33:37&#43;00:00</lastmod>
       
@@ -252,7 +252,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/about/</loc>
+      <loc>http://localhost:1313/about/</loc>
       
       
         <priority>0.9</priority>
@@ -261,7 +261,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/contact/</loc>
+      <loc>http://localhost:1313/contact/</loc>
       
       
         <priority>0.9</priority>
@@ -270,7 +270,7 @@
     </url>
   
     <url>
-      <loc>https://selcuksports.tech/dmc/</loc>
+      <loc>http://localhost:1313/dmc/</loc>
       
       
         <priority>0.9</priority>
